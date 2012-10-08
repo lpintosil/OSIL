@@ -1,0 +1,65 @@
+body {
+	font-family: Arial, Helvetica;
+	}
+#outer {
+	background-color:#aaa;
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;	
+}
+
+#inner {
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10px;
+	width:800px;
+	height:500px;
+	background-color:#eee;
+	border:1px solid #666;
+	box-shadow: .1em .1em .2em #666;
+	padding-left:50px;
+	padding-right:50px;
+}
+#inner h2 {
+
+	text-align:center;
+}
+#nameEntry, #addressEntry, #phoneEntry, #emailEntry {
+	font-weight:bold;
+	position:relative;
+	left:50px;
+	margin-top:30px;
+}
+#nameField, #addressField, #phoneField, #emailField {
+	position:relative;
+	left:100px;
+	top:-20px;
+	width:300px;
+}
+#listEntry{
+	position:absolute;
+	right:50px;
+	top:90px;
+	width:300px;
+}
+#addressList {
+	background-color:white;
+	width:300px;
+	height:250px;
+}
+#saveEntry{
+	position:absolute;
+	bottom:50px;
+	left:300px;
+}
+#saveButton,#deleteButton{
+	width:100px;
+}
+#deleteEntry{
+	position:absolute;
+	bottom:50px;
+	right:50px;
+}
