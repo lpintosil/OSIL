@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.osintegrators</groupId>
 	<artifactId>example</artifactId>
-	<name>abc</name>
+	<name>granny</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -67,7 +67,6 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${org.hibernate.version}</version>
-			<scope>provided</scope>
 		</dependency>
 		
 		<dependency>
@@ -82,11 +81,15 @@
 			<version>${org.hsqldb-version}</version>
 		</dependency> 
 		
+<!--
+		Not currently using PostgreSQL. Will uncomment when using (possibly with 'provided' scope).
+
 		<dependency>
-	<groupId>postgresql</groupId>
-	<artifactId>postgresql</artifactId>
-	<version>8.4-702.jdbc4</version>
-</dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>8.4-702.jdbc4</version>
+		</dependency>
+-->
             
 						
 		<!-- added by OSIL -->		
@@ -188,9 +191,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-					<warName>abc</warName>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
