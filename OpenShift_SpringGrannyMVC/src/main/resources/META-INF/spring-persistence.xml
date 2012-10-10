@@ -4,12 +4,18 @@
    version="1.0">
 	<persistence-unit name="application" transaction-type="RESOURCE_LOCAL">
   	  <provider>org.hibernate.ejb.HibernatePersistence</provider>
+<!--
+     Don't specify a data source here - it would be redundant with the Spring application context configuration.
+
+     In this case, Spring is managing the persistence units, rather than JBoss.
+
 	  <jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
+-->
 	  <class>com.osintegrators.example.Address</class>
 	  <properties>
-         <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
-         <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
-         <property name="hbm2ddl.auto" value="create-drop"/>
-      </properties>
+            <!-- <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/> -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+  	  </properties>
    </persistence-unit>
 </persistence>

@@ -1,0 +1,8 @@
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.0">
+  <deployment>
+    <exclusions>
+       <!-- Exclude Hibernate 4, as we are using Hibernate 3 -->
+       <module name="org.hibernate"/>
+    </exclusions>
+  </deployment>
+</jboss-deployment-structure>

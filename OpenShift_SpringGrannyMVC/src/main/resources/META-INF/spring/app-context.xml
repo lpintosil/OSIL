@@ -29,15 +29,29 @@
 	  <property name="jpaVendorAdapter">
 	    <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 	      <property name="generateDdl" value="true" />
+<!--
 	      <property name="database" value="POSTGRESQL" />
+-->
+	      <property name="database" value="HSQL" />
 	    </bean>
 	  </property>
+          <!--
+	       Override the default location for persistence.xml, because we don't want the EJB3 subsystem
+               to manage the persistence unit.
+	  -->
+          <property name="persistenceXmlLocation" value="classpath*:META-INF/spring-persistence.xml"/> 
 	</bean>
 	
 	<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close">
+<!--
 	    <property name="driverClassName" value="org.postgresql.Driver" />
 	    <property name="url" value="jdbc:postgresql://127.11.111.1:5432/openShiftGranny" />
 	    <property name="username" value="admin" />
 	    <property name="password" value="FH7XvELiTNzP" />
+-->
+	    <property name="driverClassName" value="org.hsqldb.jdbcDriver" />
+	    <property name="url" value="jdbc:hsqldb:mem:granny" />
+	    <property name="username" value="sa" />
+	    <property name="password" value="" />
 	</bean>
 </beans> 
