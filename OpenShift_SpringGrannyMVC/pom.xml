@@ -73,7 +73,7 @@
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>com.springsource.org.apache.tomcat.jdbc</artifactId>
-	<version>${tomcat.jdbc.pool.version}</version>
+			<version>${tomcat.jdbc.pool.version}</version>
 		</dependency> 
 		
 		<dependency>
